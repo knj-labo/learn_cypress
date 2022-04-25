@@ -7,12 +7,14 @@ specifiers:
   cypress: 9.5.4
   react: ^18.0.0
   react-dom: ^18.0.0
+  recoil: 0.7.2
   typescript: ^4.6.3
   vite: ^2.9.5
 
 dependencies:
   react: 18.0.0
   react-dom: 18.0.0_react@18.0.0
+  recoil: 0.7.2_react-dom@18.0.0+react@18.0.0
 
 devDependencies:
   '@types/react': 18.0.6
@@ -1172,6 +1174,10 @@ packages:
     resolution: {integrity: sha512-9ByhssR2fPVsNZj478qUUbKfmL0+t5BDVyjShtyZZLiK7ZDAArFFfopyOTj0M05wE2tJPisA4iTnnXl2YoPvOA==}
     dev: true
 
+  /hamt_plus/1.0.2:
+    resolution: {integrity: sha1-4hwlKWjH4zsg9qGwlM2FeHomVgE=}
+    dev: false
+
   /has-flag/3.0.0:
     resolution: {integrity: sha1-tdRU3CGZriJWmfNGfloH87lVuv0=}
     engines: {node: '>=4'}
@@ -1566,6 +1572,23 @@ packages:
     engines: {node: '>=0.10.0'}
     dependencies:
       loose-envify: 1.4.0
+    dev: false
+
+  /recoil/0.7.2_react-dom@18.0.0+react@18.0.0:
+    resolution: {integrity: sha512-OT4pI7FOUHcIoRtjsL5Lqq+lFFzQfir4MIbUkqyJ3nqv3WfBP1pHepyurqTsK5gw+T+I2R8+uOD28yH+Lg5o4g==}
+    peerDependencies:
+      react: '>=16.13.1'
+      react-dom: '*'
+      react-native: '*'
+    peerDependenciesMeta:
+      react-dom:
+        optional: true
+      react-native:
+        optional: true
+    dependencies:
+      hamt_plus: 1.0.2
+      react: 18.0.0
+      react-dom: 18.0.0_react@18.0.0
     dev: false
 
   /request-progress/3.0.0:
