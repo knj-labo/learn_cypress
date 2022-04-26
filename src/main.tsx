@@ -1,13 +1,20 @@
 import React from 'react'
-import ReactDOM from 'react-dom/client'
+import { RecoilRoot } from 'recoil'
+import { Router } from '@reach/router'
+
+import { root } from './root'
 import App from './App'
 import './index.css'
 
-const isRootElement = document.getElementById('root');
-if (!isRootElement) throw new Error('Failed to find the root element');
-const root = ReactDOM.createRoot(isRootElement);
+
 root.render(
     <React.StrictMode>
-        <App />
+        <RecoilRoot>
+            <Router>
+                <App path="/" />
+                <App path="/active" />
+                <App path="/completed" />
+            </Router>
+        </RecoilRoot>
     </React.StrictMode>
 )
