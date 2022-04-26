@@ -17,7 +17,7 @@ export enum LocalStorageKey {
     APP_STATE = 'APP_STATE',
 }
 
-function LoadAppStateFromLocalStorage(): AppState {
+const LoadAppStateFromLocalStorage = (): AppState => {
     const stringifiedJSON: string | null = window.localStorage.getItem(
         LocalStorageKey.APP_STATE
     )
