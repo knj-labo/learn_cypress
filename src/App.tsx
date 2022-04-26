@@ -6,6 +6,7 @@ import type { AppState } from './dataStructure'
 import { recoilState, LocalStorageKey } from './dataStructure'
 
 import { NewTodoTextInput } from './NewTodoTextInput'
+import { TodoList } from './TodoList'
 import { Layout } from './style'
 import { Copyright } from './Copyright'
 
@@ -30,6 +31,7 @@ const App: React.FC<Props & RouteComponentProps> = ({ path }) => {
         <Layout>
             <section className="todoapp">
                 <NewTodoTextInput />
+                {appState.todoList.length >= 1 && (<TodoList path={path} />)}
             </section>
             <Copyright />
         </Layout>
