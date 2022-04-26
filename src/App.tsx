@@ -7,7 +7,7 @@ import { recoilState, LocalStorageKey } from './dataStructure'
 
 import { NewTodoTextInput } from './NewTodoTextInput'
 import { UnderBar } from './UnderBar'
-import { TodoList } from './TodoList'
+import { TodoList } from './TodoList/TodoList'
 import { Layout } from './style'
 import { Copyright } from './Copyright'
 
