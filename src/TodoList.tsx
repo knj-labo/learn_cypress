@@ -20,6 +20,8 @@ export const TodoList: React.FC<Props> = ({ path }) => {
         setAppState({ todoList: appState.todoList.map((t: Todo): Todo => ({ ...t, completed: e.target.checked })) })
     }
 
+    console.log(path)
+
     return (
         <Layout>
             <section className="main">
