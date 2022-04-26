@@ -6,7 +6,7 @@ import type { AppState, Todo } from './dataStructure'
 import { recoilState } from './dataStructure'
 
 import { Item } from './Item'
-import { Layout } from './TodoLIst.style'
+import { Layout } from './todoList.style'
 
 type Props = {
     path: '/' | '/active' | '/completed'

@@ -4,7 +4,7 @@ import { useRecoilState } from 'recoil'
 import type { AppState, Todo, TodoListType } from './dataStructure'
 import { recoilState } from './dataStructure'
 
-import { Layout } from './Item.style'
+import { Layout } from './item.style'
 
 interface Props {
     todo: Todo
