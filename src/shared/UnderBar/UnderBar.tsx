@@ -1,10 +1,10 @@
 import React from 'react'
 import { useRecoilState } from 'recoil'
 
-import type { AppState, Todo } from './dataStructure'
-import { recoilState } from './dataStructure'
+import type { AppState, Todo } from '@/dataStructure'
+import { recoilState } from '@/dataStructure'
 
-import { FilterLink } from './FilterLink'
+import { FilterLink } from '@/FilterLink'
 import { Layout } from './underBar.style'
 
 type Props = {
