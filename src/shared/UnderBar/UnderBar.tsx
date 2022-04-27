@@ -4,7 +4,7 @@ import { useRecoilState } from 'recoil'
 import type { AppState, Todo } from '@/dataStructure'
 import { recoilState } from '@/dataStructure'
 
-import { FilterLink } from '@/FilterLink'
+import { FilterLink } from '@/shared/FilterLink'
 import { Layout } from './underBar.style'
 
 type Props = {

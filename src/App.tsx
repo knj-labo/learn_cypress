@@ -5,11 +5,11 @@ import { useRecoilValue } from 'recoil'
 import type { AppState } from './dataStructure'
 import { recoilState, LocalStorageKey } from './dataStructure'
 
-import { NewTodoTextInput } from './NewTodoTextInput'
-import { UnderBar } from './UnderBar'
+import { NewTodoTextInput } from '@/shared/NewTodoTextInput/NewTodoTextInput'
+import { UnderBar } from '@/shared/UnderBar/UnderBar'
 import { TodoList } from '@/shared/TodoList/TodoList'
 import { Layout } from './style'
-import { Copyright } from './Copyright'
+import { Copyright } from '@/shared/Copyright'
 
 type Routes = '/' | '/active' | '/completed'
 
