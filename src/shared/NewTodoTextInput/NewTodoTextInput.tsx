@@ -1,9 +1,9 @@
 import React, { createRef } from 'react'
 import { useRecoilState } from 'recoil'
 
-import type { AppState, Todo } from './dataStructure'
-import { recoilState } from './dataStructure'
-import { uuid } from './uuid'
+import type { AppState, Todo } from '@/dataStructure'
+import { recoilState } from '@/dataStructure'
+import { uuid } from '@/uuid'
 
 import { Layout } from './newTodoTextInput.style'
 
