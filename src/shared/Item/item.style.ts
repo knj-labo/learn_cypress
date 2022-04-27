@@ -4,7 +4,7 @@
 
 import styled from 'styled-components'
 
-import { base } from './style'
+import { base } from '@/style'
 
 export const Layout = styled.div`
   position: relative;

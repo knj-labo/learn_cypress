@@ -1,8 +1,8 @@
 import React, { useState, createRef, useEffect } from 'react'
 import { useRecoilState } from 'recoil'
 
-import type { AppState, Todo, TodoListType } from './dataStructure'
-import { recoilState } from './dataStructure'
+import type { AppState, Todo, TodoListType } from '@/dataStructure'
+import { recoilState } from '@/dataStructure'
 
 import { Layout } from './item.style'
 

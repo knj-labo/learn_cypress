@@ -2,10 +2,10 @@ import type { ReactElement } from 'react'
 import React from 'react'
 import { useRecoilState } from 'recoil'
 
-import type { AppState, Todo } from '../../dataStructure'
-import { recoilState } from '../../dataStructure'
+import type { AppState, Todo } from '@/dataStructure'
+import { recoilState } from '@/dataStructure'
 
-import { Item } from '../../Item'
+import { Item } from '@/shared/Item/Item'
 import { Layout } from './todoList.style'
 
 type Props = {
@@ -19,8 +19,6 @@ export const TodoList: React.FC<Props> = ({ path }) => {
         // reverse all todo.completed: boolean flag
         setAppState({ todoList: appState.todoList.map((t: Todo): Todo => ({ ...t, completed: e.target.checked })) })
     }
-
-    console.log(path)
 
     return (
         <Layout>
