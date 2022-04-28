@@ -15,6 +15,7 @@ root.render(
                     <Route index element={<App path={'/'} />} />
                     <Route path='/active' element={<App path={'/active'} />} />
                     <Route path='/completed' element={<App path={'/completed'} />} />
+                    <Route path="*" element={<NotFound />} />
                 </Routes>
             </BrowserRouter>
         </RecoilRoot>
