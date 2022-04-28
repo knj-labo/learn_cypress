@@ -30,7 +30,7 @@ export const TodoList: React.FC<Props> = ({ path }) => {
                     onChange={toggleAllCheckbox}
                 />
                 <label htmlFor="toggle-all">Mark all as complete</label>
-                <ul className="todo-list">
+                <ul className="todo-list" data-testid="todo-list">
                     {appState.todoList
                         .filter((t: Todo): boolean => {
                             switch (path) {

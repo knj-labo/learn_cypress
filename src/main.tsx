@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import { root } from './root'
 import App from './App'
-import { NotFound } from './NotFound'
+import { NotFound } from '@/shared/NotFound'
 import './index.css'
 
 root.render(

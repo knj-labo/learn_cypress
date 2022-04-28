@@ -40,6 +40,7 @@ export const NewTodoTextInput: React.FC = () => {
                     placeholder="What needs to be done?"
                     ref={textInput}
                     onKeyPress={(e: React.KeyboardEvent<HTMLInputElement>) => addTodo(e)}
+                    data-cy="new-todo-input-text"
                 />
             </header>
         </Layout>
