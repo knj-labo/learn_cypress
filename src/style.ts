@@ -2,7 +2,7 @@
 /* Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com) */
 /* This source code was getting from https://github.com/tastejs/todomvc-app-css/blob/03e753aa21bd555cbdc2aa09185ecb9905d1bf16/index.css */
 
-import styled, { css } from 'styled-components'
+import styled, { css } from "styled-components";
 
 export const Layout = styled.div`
   .todoapp {
@@ -56,10 +56,10 @@ export const Layout = styled.div`
   .info a:hover {
     text-decoration: underline;
   }
-`
+`;
 
 export const base = {
-    textInput: css`
+  textInput: css`
     position: relative;
     margin: 0;
     width: 100%;
@@ -75,4 +75,4 @@ export const base = {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   `,
-}
+};
