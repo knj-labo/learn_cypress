@@ -2,7 +2,7 @@
 /* Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com) */
 /* This source code was getting from https://github.com/tastejs/todomvc-app-css/blob/03e753aa21bd555cbdc2aa09185ecb9905d1bf16/index.css */
 
-import styled from 'styled-components'
+import styled from "styled-components";
 
 export const Layout = styled.div`
   .main {
@@ -30,7 +30,7 @@ export const Layout = styled.div`
     transform: rotate(90deg);
   }
   .toggle-all + label:before {
-    content: '❯';
+    content: "❯";
     font-size: 22px;
     color: #e6e6e6;
     padding: 10px 27px 10px 27px;
@@ -56,4 +56,4 @@ export const Layout = styled.div`
       height: 40px;
     }
   }
-`
+`;

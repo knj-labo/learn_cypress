@@ -1,47 +1,47 @@
-import type { RouteComponentProps } from '@reach/router'
-import React, { useEffect } from 'react'
-import { useRecoilValue } from 'recoil'
+import type { RouteComponentProps } from "@reach/router";
+import React, { useEffect } from "react";
+import { useRecoilValue } from "recoil";
 
-import type { AppState } from './dataStructure'
-import { recoilState, LocalStorageKey } from './dataStructure'
+import { Copyright } from "@/shared/Copyright";
+import { NewTodoTextInput } from "@/shared/NewTodoTextInput/NewTodoTextInput";
+import { TodoList } from "@/shared/TodoList/TodoList";
+import { UnderBar } from "@/shared/UnderBar/UnderBar";
 
-import { NewTodoTextInput } from '@/shared/NewTodoTextInput/NewTodoTextInput'
-import { UnderBar } from '@/shared/UnderBar/UnderBar'
-import { TodoList } from '@/shared/TodoList/TodoList'
-import { Layout } from './style'
-import { Copyright } from '@/shared/Copyright'
+import { recoilState, LocalStorageKey } from "./dataStructure";
+import type { AppState } from "./dataStructure";
+import { Layout } from "./style";
 
-type Routes = '/' | '/active' | '/completed'
+type Routes = "/" | "/active" | "/completed";
 
 type Props = {
-    path: Routes
-}
+  path: Routes;
+};
 
 const App: React.FC<Props & RouteComponentProps> = ({ path }) => {
-    const appState = useRecoilValue<AppState>(recoilState)
+  const appState = useRecoilValue<AppState>(recoilState);
 
-    // if appState has changes, save it LocalStorage.
-    useEffect((): void => {
-        window.localStorage.setItem(
-            LocalStorageKey.APP_STATE,
-            JSON.stringify(appState) // convert JavaScript Object to string
-        )
-    }, [appState])
+  // if appState has changes, save it LocalStorage.
+  useEffect((): void => {
+    window.localStorage.setItem(
+      LocalStorageKey.APP_STATE,
+      JSON.stringify(appState) // convert JavaScript Object to string
+    );
+  }, [appState]);
 
-    return (
-        <Layout>
-            <section className="todoapp">
-                <NewTodoTextInput />
-                {appState.todoList.length >= 1 && (
-                    <>
-                        <TodoList path={path} />
-                        <UnderBar path={path} />
-                    </>
-                )}
-            </section>
-            <Copyright />
-        </Layout>
-    )
-}
+  return (
+    <Layout>
+      <section className="todoapp">
+        <NewTodoTextInput />
+        {appState.todoList.length >= 1 && (
+          <>
+            <TodoList path={path} />
+            <UnderBar path={path} />
+          </>
+        )}
+      </section>
+      <Copyright />
+    </Layout>
+  );
+};
 
-export default App
+export default App;

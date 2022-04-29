@@ -2,7 +2,7 @@
 /* Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com) */
 /* This source code was getting from https://github.com/tastejs/todomvc-app-css/blob/03e753aa21bd555cbdc2aa09185ecb9905d1bf16/index.css */
 
-import styled from 'styled-components'
+import styled from "styled-components";
 
 export const Layout = styled.div`
   .footer {
@@ -13,7 +13,7 @@ export const Layout = styled.div`
     border-top: 1px solid #e6e6e6;
   }
   .footer:before {
-    content: '';
+    content: "";
     position: absolute;
     right: 0;
     bottom: 0;
@@ -75,4 +75,4 @@ export const Layout = styled.div`
       bottom: 10px;
     }
   }
-`
+`;
