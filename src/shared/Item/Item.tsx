@@ -115,7 +115,11 @@ export const Item: React.FC<Props> = ({ todo }) => {
           <div onClick={onClick} onKeyDown={onClick} role="button" tabIndex={0}>
             <label>{todo.bodyText}</label>
           </div>
-          <button className="destroy" onClick={() => removeItem(todo.id)} />
+          <button
+            className="destroy"
+            onClick={() => removeItem(todo.id)}
+            data-cy="delete-todo-btn"
+          />
         </div>
         <input
           ref={editInput}

@@ -30,7 +30,7 @@ export const UnderBar: React.FC<Props> = ({ path }) => {
     <Layout>
       <footer className="footer">
         <span className="todo-count">
-          <strong>{yetCount}</strong>
+          <strong data-cy="remaining-uncompleted-todo-count">{yetCount}</strong>
           item left
         </span>
         <FilterLink path={path} />

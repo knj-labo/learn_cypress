@@ -1,4 +1,8 @@
-import { TYPE_FIRST_PATTERN, TYPE_SECOND_PATTERN, TYPE_THIRD_PATTERN} from '../support/commands'
+import {
+  TYPE_FIRST_PATTERN,
+  TYPE_SECOND_PATTERN,
+  TYPE_THIRD_PATTERN,
+} from "../support/commands";
 
 describe("Todoリストを追加", () => {
   beforeEach(() => {
