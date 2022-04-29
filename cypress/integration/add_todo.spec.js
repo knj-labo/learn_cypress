@@ -1,6 +1,8 @@
+import { TYPE_FIRST_PATTERN, TYPE_SECOND_PATTERN, TYPE_THIRD_PATTERN} from '../support/commands'
+
 describe("Todoリストを追加", () => {
   beforeEach(() => {
-    cy.visit("http://localhost:3000");
+    cy.visit("http://localhost:3002");
   });
 
   const TYPE_SOMETHING = "can be typing";
@@ -16,9 +18,6 @@ describe("Todoリストを追加", () => {
       .should("contain", TYPE_SOMETHING);
   });
 
-  const TYPE_FIRST_PATTERN = "type first pattern";
-  const TYPE_SECOND_PATTERN = "type second pattern";
-  const TYPE_THIRD_PATTERN = "type third pattern";
   it("Todoリストは複数のアイテムを作成", () => {
     cy.get("[data-cy=new-todo-input-text]")
       .type(TYPE_FIRST_PATTERN)
