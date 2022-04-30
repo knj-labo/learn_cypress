@@ -11,12 +11,20 @@ export const FilterLink: React.FC<Props> = ({ path }) => {
   return (
     <ul className="filters">
       <li>
-        <Link className={path === "/" ? "selected" : ""} to="/">
+        <Link
+          data-cy="all-filter"
+          className={path === "/" ? "selected" : ""}
+          to="/"
+        >
           All
         </Link>
       </li>
       <li>
-        <Link className={path === "/active" ? "selected" : ""} to="/active">
+        <Link
+          data-cy="active-filter"
+          className={path === "/active" ? "selected" : ""}
+          to="/active"
+        >
           Active
         </Link>
       </li>
