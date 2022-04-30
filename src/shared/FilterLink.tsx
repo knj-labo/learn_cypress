@@ -30,6 +30,7 @@ export const FilterLink: React.FC<Props> = ({ path }) => {
       </li>
       <li>
         <Link
+          data-cy="completed-filter"
           className={path === "/completed" ? "selected" : ""}
           to="/completed"
         >
