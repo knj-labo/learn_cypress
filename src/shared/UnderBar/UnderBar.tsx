@@ -35,7 +35,11 @@ export const UnderBar: React.FC<Props> = ({ path }) => {
         </span>
         <FilterLink path={path} />
         {doneCount > 0 && (
-          <button onClick={clearCompleted} className="clear-completed">
+          <button
+            onClick={clearCompleted}
+            className="clear-completed"
+            data-cy="clear-completed-button"
+          >
             Clear completed
           </button>
         )}
