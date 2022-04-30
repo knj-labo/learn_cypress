@@ -2,11 +2,12 @@ import {
   TYPE_FIRST_PATTERN,
   TYPE_SECOND_PATTERN,
   TYPE_THIRD_PATTERN,
-} from "../support/commands";
+  LOCALHOST,
+} from "../support/consts";
 
 describe("Todoリストを追加", () => {
   beforeEach(() => {
-    cy.visit("http://localhost:3002");
+    cy.visit(LOCALHOST);
   });
 
   const TYPE_SOMETHING = "can be typing";

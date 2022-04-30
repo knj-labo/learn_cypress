@@ -1,3 +1,9 @@
+import {
+  TYPE_FIRST_PATTERN,
+  TYPE_SECOND_PATTERN,
+  TYPE_THIRD_PATTERN,
+  LOCALHOST,
+} from "../support/consts";
 // ***********************************************
 // This example commands.js shows you how to
 // create various custom commands and overwrite
@@ -25,9 +31,6 @@
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
 const COMMAND_DELAY = 550;
-export const TYPE_FIRST_PATTERN = "type first pattern";
-export const TYPE_SECOND_PATTERN = "type second pattern";
-export const TYPE_THIRD_PATTERN = "type third pattern";
 
 for (const command of [
   "visit",
@@ -50,7 +53,7 @@ for (const command of [
 }
 
 Cypress.Commands.add("createThreeOfTodoItems", () => {
-  cy.visit("http://localhost:3002/");
+  cy.visit(LOCALHOST);
   cy.get("[data-cy=new-todo-input-text]")
     .type(TYPE_FIRST_PATTERN)
     .type("{enter}")
